@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_calendar"
+        android:title="Calendar"
+        android:icon="@drawable/calendar"/>
+
+    <item
+        android:id="@+id/bottom_upsolve"
+        android:title="Upsolve"
+        android:icon="@drawable/upsolve"/>
+    <item
+        android:id="@+id/bottom_unsolved"
+        android:title="Unsolved"
+        android:icon="@drawable/unsolved"/>
+    <item
+        android:id="@+id/bottom_friends"
+        android:title="Friends"
+        android:icon="@drawable/friends"/>
+    <item
+        android:id="@+id/bottom_user"
+        android:title="Profile"
+        android:icon="@drawable/user"/>
+
+</menu>
