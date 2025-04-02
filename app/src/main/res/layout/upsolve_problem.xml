@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cv_unsolved_problem"
+        android:id="@+id/cv_upsolve_problem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="13dp"
@@ -15,12 +15,11 @@
         app:cardElevation="5dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_upsolve_problem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/light_red"
             android:padding="12dp">
-
-
+            
             <TextView
                 android:id="@+id/tv_problem_name"
                 android:layout_width="0dp"
@@ -46,11 +45,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_problem_name" />
 
             <TextView
-                android:id="@+id/tv_verdict"
+                android:id="@+id/tv_status"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Verdict"
+                android:text="Status"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"

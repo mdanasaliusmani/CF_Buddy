@@ -53,8 +53,7 @@ class CalendarFragment : Fragment() {
             }
             if (response.isSuccessful && response.body() != null && response.body()!!.status == "OK") {
                 val upcomingContests = response.body()!!.result.filter { it.phase == "BEFORE" }
-                upcomingContests.reversed()
-                ContestListAdapter.contests = upcomingContests
+                ContestListAdapter.contests = upcomingContests.asReversed()
             } else {
                 Log.e(TAG, "Response not successful")
             }

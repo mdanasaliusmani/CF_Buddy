@@ -44,7 +44,7 @@ class ProblemAdapter : RecyclerView.Adapter<ProblemAdapter.ProblemViewHolder>() 
         holder.binding.apply {
             val submission = submissions[position]
             tvProblemName.text = "${submission.problem.index}. ${submission.problem.name}"
-            tvRating.text = "Rating: ${submission.problem.rating.toString()}"
+            if (submission.problem.rating!=null) tvRating.text = "Rating: ${submission.problem.rating}" else "Rating: Not Available"
             tvVerdict.text = "Verdict: ${submission.verdict}"
         }
     }

@@ -1,5 +1,6 @@
 package com.example.cfbuddy
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -22,7 +23,7 @@ class UnsolvedFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentUnsolvedBinding.inflate(inflater, container, false)
         return binding.root
@@ -38,10 +39,11 @@ class UnsolvedFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
         binding = FragmentUnsolvedBinding.inflate(layoutInflater)
+        val handle = requireContext().getSharedPreferences("MyAppPreferences", Context.MODE_PRIVATE).getString("user_handle", null)?: "Md_Anas_Ali_Usmani"
 
         lifecycleScope.launch {
             val response = try {
-                RetrofitInstance.api.getUserStatus()
+                RetrofitInstance.api.getUserStatus(handle)
             } catch (e: IOException) {
                 Log.e(TAG, "IOException, you might not have internet connection")
                 return@launch

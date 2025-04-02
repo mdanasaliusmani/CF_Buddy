@@ -9,6 +9,19 @@ interface ApiSet {
     @GET("contest.list?gym=false")
     suspend fun getUpcomingContests(): Response<ApiResponse<List<UpcomingContest>>>
 
-    @GET("user.status?handle=Md_Anas_Ali_Usmani")
-    suspend fun getUserStatus(): Response<ApiResponse<List<Submission>>>
+    @GET("user.status?")
+    suspend fun getUserStatus(@Query("handle") handle: String): Response<ApiResponse<List<Submission>>>
+
+    @GET("user.rating?")
+    suspend fun getUpsolveContests(@Query("handle") handle: String): Response<ApiResponse<List<UpsolveContest>>>
+
+    @GET("contest.standings?asManager=false&from=1&count=5&showUnofficial=true")
+    suspend fun getUpsolveContestProblems(
+        @Query("contestId") contestId: Long,
+        @Query("handles") handles: String
+    ): Response<ApiResponse<UpsolveProblem>>
+
+    @GET("user.info?checkHistoricHandles=true")
+    suspend fun getUserInfo(@Query("handles") handles: String): Response<ApiResponse<List<UserInfo>>>
+
 }
