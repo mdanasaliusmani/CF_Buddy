@@ -14,10 +14,10 @@
         android:id="@+id/bottom_unsolved"
         android:title="Unsolved"
         android:icon="@drawable/unsolved"/>
-    <item
-        android:id="@+id/bottom_friends"
-        android:title="Friends"
-        android:icon="@drawable/friends"/>
+<!--    <item-->
+<!--        android:id="@+id/bottom_friends"-->
+<!--        android:title="Friends"-->
+<!--        android:icon="@drawable/friends"/>-->
     <item
         android:id="@+id/bottom_user"
         android:title="Profile"

@@ -39,10 +39,10 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(UpsolveFragment())
                     true
                 }
-                R.id.bottom_friends -> {
-                    replaceFragment(FriendsFragment())
-                    true
-                }
+//                R.id.bottom_friends -> {
+//                    replaceFragment(FriendsFragment())
+//                    true
+//                }
                 R.id.bottom_user -> {
                     replaceFragment(UserFragment())
                     true
