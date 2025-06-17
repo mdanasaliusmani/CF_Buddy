@@ -62,7 +62,6 @@ class UpsolveContestProblemsActivity : AppCompatActivity() {
                             break
                         } else if (result.points == 0 && result.rejectedAttemptCount != 0) {
                             status = "Unsolved"
-                            break
                         }
                     }
 
