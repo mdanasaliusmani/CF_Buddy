@@ -49,11 +49,12 @@ class ContestListAdapter: RecyclerView.Adapter<ContestListAdapter.ContestViewHol
             val hours = if (contest.durationSeconds.toInt() % 86400 / 3600 != 0) "${contest.durationSeconds.toInt() % 86400 / 3600} hr" else ""
             val minutes = if (contest.durationSeconds.toInt() % 3600 / 60 != 0) "${contest.durationSeconds.toInt() % 3600 / 60} min" else ""
             val date = Date(contest.startTimeSeconds * 1000)
-            val contestDate = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(date)
+            val contestDateTimeFormatter = SimpleDateFormat("E, dd/MM/yyyy | h:mm a", Locale.getDefault())
+            val contestDateTimeString = contestDateTimeFormatter.format(date)
             tvContestName.text = contest.name
             tvContestType.text = "Type: ${contest.type}"
-            tvContestDuration.text = "Duration: ${days} ${hours} ${minutes}"
-            tvContestStartTime.text = "Starts: ${contestDate}"
+            tvContestDuration.text = "Duration: $days $hours $minutes".trim() // trim to remove extra spaces if some fields are empty
+            tvContestStartTime.text = "Starts: $contestDateTimeString"
         }
     }
 }

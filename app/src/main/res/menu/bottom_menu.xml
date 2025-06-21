@@ -2,24 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/bottom_calendar"
+        android:id="@+id/calendarFragment"
         android:title="Calendar"
         android:icon="@drawable/calendar"/>
 
     <item
-        android:id="@+id/bottom_upsolve"
+        android:id="@+id/upsolveFragment"
         android:title="Upsolve"
         android:icon="@drawable/upsolve"/>
     <item
-        android:id="@+id/bottom_unsolved"
+        android:id="@+id/unsolvedFragment"
         android:title="Unsolved"
         android:icon="@drawable/unsolved"/>
 <!--    <item-->
-<!--        android:id="@+id/bottom_friends"-->
+<!--        android:id="@+id/friendsFragment"-->
 <!--        android:title="Friends"-->
 <!--        android:icon="@drawable/friends"/>-->
     <item
-        android:id="@+id/bottom_user"
+        android:id="@+id/userFragment"
         android:title="Profile"
         android:icon="@drawable/user"/>
 

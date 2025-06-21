@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/calendarFragment">
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.example.cfbuddy.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/upsolveFragment"
+        android:name="com.example.cfbuddy.UpsolveFragment"
+        android:label="fragment_upsolve"
+        tools:layout="@layout/fragment_upsolve" />
+
+    <fragment
+        android:id="@+id/unsolvedFragment"
+        android:name="com.example.cfbuddy.UnsolvedFragment"
+        android:label="fragment_unsolved"
+        tools:layout="@layout/fragment_unsolved" />
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.example.cfbuddy.FriendsFragment"
+        android:label="fragment_friends"
+        tools:layout="@layout/fragment_friends" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.example.cfbuddy.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
+</navigation>
